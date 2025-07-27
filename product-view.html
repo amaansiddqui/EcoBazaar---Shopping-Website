@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-commerce Website - Product View</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/product-view.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">EcoBazaar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="category.html" class="nav-link">Categories</a></li>
+                    <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="product-view container py-5">
+        <h1 id="productTitle">Product Title</h1>
+        <div class="row product-details">
+            <div class="col-md-6 product-images">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-4">Product Details</h2><div id="productThumbnailImages" class="d-flex flex-wrap" >
+                    <!-- Thumbnail images will be inserted here -->
+
+                </div>
+            <div class="col-md-6 product-info">
+                <p id="productDescription">This is a detailed description of the product.</p>
+                <p id="productPrice" class="price fs-4 text-primary fw-bold">$59.99</p>
+                <img id="productImage" src="" alt="Product Image" class="img-fluid mb-3" />
+                <div id="productRatings" class="ratings mb-3">
+                    <span>★★★★☆</span> (4.0)
+                </div>
+                <button id="addToCartBtn" class="btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+
+
+
+<section class="related-products mt-5">
+            <h2>Related Products</h2>
+            
+            <div id="relatedProductsContainer" class="row"
+                
+            
+             </div>
+            <div class="col-md-3 product-card"> 
+
+                <img src="https://ik.imagekit.io/2xkwa8s1i/img/coffee-tables/praline/1.jpg?tr=w-1200" alt="Coffee Table" class="img-fluid mb-2" />
+                <h3>Coffee Table</h3>
+                <p class="price">$150.00</p>
+                <button class="btn btn-secondary">View Details</button>
+</div>
+
+<div class="col-md-3 product-card">
+                <img src="https://www.leafstudios.in/cdn/shop/files/1_98f0528c-cde8-4599-8b92-fd745efe299f_1024x1024.png?v=1722233325" />
+                <h3>Smart Watch</h3>
+                <p class="price">$129.99</p>
+                <button class="btn btn-secondary">View Details</button>
+            
+            <!-- Related products will be displayed here -->
+            </div>
+<div class="col-md-3 product-card">
+                <img src="https://i5.walmartimages.com/asr/6b8115fb-1861-4f70-af5a-edb565893ce9_1.2453928585d7ff4c12980276de633049.jpeg" />
+                <h3>Cook Book</h3>
+                <p class="price">$129.99</p>
+                <button class="btn btn-secondary">View Details</button>
+            
+            <!-- Related products will be displayed here -->
+            </div>
+
+    
+
+        <section class="product-reviews mt-5">
+            <h2>Product Reviews</h2>
+            <div id="reviewsContainer" class="mb-4">
+                <!-- Reviews will be displayed here -->
+            </div>
+            <form id="reviewForm">
+                <div class="mb-3">
+                    <label for="reviewerName" class="form-label">Name</label>
+                    <input type="text" id="reviewerName" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label for="reviewRating" class="form-label">Rating</label>
+                    <select id="reviewRating" class="form-select" required>
+                        <option value="">Select rating</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Good</option>
+                        <option value="3">3 - Average</option>
+                        <option value="2">2 - Poor</option>
+                        <option value="1">1 - Terrible</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="reviewComment" class="form-label">Comment</label>
+                    <textarea id="reviewComment" class="form-control" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+            </form>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-3 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 EcoBazaar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top" class="btn btn-warning rounded-circle" style="display:none; position: fixed; bottom: 40px; right: 40px; z-index: 100; font-size: 24px; padding: 12px 16px;">
+        &#8679;
+    </button>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
