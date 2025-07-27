@@ -1,5 +1,3 @@
-# EcoBazaar---Shopping-Website
-
 
 # EcoBazaar - Shopping Website
 
